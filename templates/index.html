@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Club de Lectura</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Club de Lectura</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Más elementos de navegación según sea necesario -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Bienvenido al Club de Lectura</h1>
+        <p>Explora, comparte y disfruta de la lectura con amigos.</p>
+
+        <!-- Sección de Libros -->
+        <section id="libros">
+            <h2>Libros de Este Mes</h2>
+            <!-- Contenido dinámico de libros aquí -->
+            <ul id="lista-libros">
+                <!-- Los libros se añadirán aquí dinámicamente -->
+            </ul>
+        </section>
+
+        <!-- Sección de Reseñas -->
+        <section id="reseñas">
+            <h2>Reseñas Recientes</h2>
+            <div id="contenedor-reseñas">
+                <!-- Las reseñas se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Sección de Anotaciones -->
+        <section id="anotaciones">
+            <h2>Anotaciones de Lectores</h2>
+            <!-- Contenido dinámico de anotaciones aquí -->
+        </section>
+
+        <!-- Formulario para añadir libros (ejemplo) -->
+        <form id="formulario-libro" onsubmit="return validarFormulario()">
+            <input type="text" id="titulo-libro" placeholder="Título del libro">
+            <button type="submit">Añadir Libro</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Script Personalizado -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
